@@ -1,6 +1,6 @@
 function part1(ls) {
     const lnsq = Math.floor(Math.ceil(Math.sqrt(ls))/2)*2+1;
-    const circle = Math.ceil((lnsq - 1) / 2);
+    const circle = (lnsq - 1) / 2;
     const mnum   = lnsq**2;
     return Math.abs(circle - (mnum-ls) % (circle*2))+circle;
 }
