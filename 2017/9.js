@@ -5,33 +5,33 @@ function solution(input) {
 	let sum = 0;
 	let garbageCount = 0;
 	for (let char of input) {
-	  if (skip) {
-	    skip = false;
-	    continue;
-	  }
+		if (skip) {
+			skip = false;
+			continue;
+		}
 		if (char === '!') {
-		  skip = true;
-		  continue;
+			skip = true;
+			continue;
 		}
 		if (char === '>') {
-		  junk = false;
-		  continue;
+			junk = false;
+			continue;
 		}
 		if (junk) {
-		  garbageCount++;
-		  continue;
+			garbageCount++;
+			continue;
 		} else if (char === '<') {
-		  junk = true;
-		  continue;
+			junk = true;
+			continue;
 		}
-		
+
 		if (char === '{') {
-		   h++;
-		   sum+=h;
+		 	h++;
+		 	sum+=h;
 		}
-		
+
 		if (char === '}') {
-		   h--;
+		 	h--;
 		}
 	}
 	
